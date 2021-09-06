@@ -2,7 +2,6 @@ import React from 'react'
 import Form from './Form'
 import FormLocation from './FormLocation'
 import PackageDetails from './PackageDetails'
-import Distance from './Distance'
 import Charges from './Charges'
 import Buttons from './Buttons'
 
@@ -28,7 +27,6 @@ const MakeOrder = () => {
                         <div className='form'>
                             <div className='package'>
                                 <PackageDetails />
-                                <Distance />
                                 <Charges />
                             </div>
                         </div>
