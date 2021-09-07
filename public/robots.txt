@@ -2,6 +2,7 @@
 User-agent: *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Disallow:
 =======
 Disallow:
@@ -9,3 +10,6 @@ Disallow:
 =======
 Disallow:
 >>>>>>> origin/order-page
+=======
+Disallow:
+>>>>>>> origin/ft-profilepage

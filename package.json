@@ -1,9 +1,13 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/order-page
   "name": "courier-frontend",
+=======
+  "name": "profilepage",
+>>>>>>> origin/ft-profilepage
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,6 +18,7 @@
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   "name": "courier-create-order",
@@ -30,6 +35,8 @@
 >>>>>>> beeaaba526c87c7c7d99af377b698f8587b8fea2
 =======
 >>>>>>> origin/order-page
+=======
+>>>>>>> origin/ft-profilepage
   },
   "scripts": {
     "start": "react-scripts start",
