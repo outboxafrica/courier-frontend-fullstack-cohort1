@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from './CreateOrder/Header'
-import MakeOrder from './CreateOrder/MakeOrder'
-import './CreateOrder/CreateOrder.css'
+import Header from './Create-Order/Header'
+import MakeOrder from './Create-Order/MakeOrder'
+import './Create-Order/CreateOrder.css'
 
 const CreateOrder = () => {
     return (
