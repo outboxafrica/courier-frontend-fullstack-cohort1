@@ -1,10 +1,11 @@
-import './index.css'
-import CreateOrder from './Components/CreateOrder'
+
+import './App.css';
+import Form from './Components/Form';
 
 function App() {
   return (
     <div className="App">
-      <CreateOrder/>
+      <Form />
     </div>
   );
 }
