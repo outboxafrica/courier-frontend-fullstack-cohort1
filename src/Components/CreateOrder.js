@@ -5,10 +5,11 @@ import './CreateOrder/CreateOrder.css'
 
 const CreateOrder = () => {
     return (
-        <div>
+        <div className ="container">
             <Header />
             <MakeOrder />
         </div>
+
     )
 }
 

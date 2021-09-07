@@ -18,7 +18,8 @@
   
   .form-img {
     width: 27rem;
-    height: 60rem;
+    background-color: transparent;
+    /* height: 60rem; */
     position: absolute;
     top: 50%;
     left: 50%;  
@@ -50,6 +51,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
   }
   
   .form a {
@@ -59,6 +61,7 @@
     width: 80%;
     margin-bottom: 1.2rem;
     color: #F49033;
+    background-color: transparent;
   }
   
   .form h2 {
@@ -67,18 +70,21 @@
     width: 80%;
     margin-bottom: 1rem;
     color: black;
+    background-color: transparent;
   }
 
 
   .form-inputs {
     margin-bottom: 0.5rem;
     width: 80%;
+    background-color: transparent;
   }
   
   .form-inputs p {
     font-size: 0.7rem;
     margin-top: 0.4rem;
     color: #f00e0e;
+    background-color: transparent;
   }
   
   .form-label {
@@ -86,6 +92,7 @@
     font-size: 0.8rem;
     margin-bottom: 6px;
     color: black;
+    background-color: transparent;
   }
   
   .form-input {
@@ -96,6 +103,7 @@
     border-radius: 10px;
     height: 40px;
     width: 100%;
+    background-color: transparent;
   }
   
   .form-input::placeholder {
@@ -114,8 +122,17 @@
     color: #fff;
     font-size: 1rem;
   }
-  
+  .form-input-btn a{
+    color: #fff;
+    background-color:#F49033 ;
+    text-decoration: none;
+  }
   .form-input-btn:hover {
+    cursor: pointer;
+    background: #d66c09;
+    transition: all 0.4s ease-out;
+  }
+  .form-input-btn a:hover{
     cursor: pointer;
     background: #d66c09;
     transition: all 0.4s ease-out;
@@ -127,11 +144,16 @@
     color: black;
     width: 80%;
     text-align: center;
+    background-color: transparent;
   }
   
   .form-input-login a {
     text-decoration: none;
-    color: #F49033;
+    /* color: #F49033; */
     font-weight: 600;
   }
-  
+  /* a{
+    color: #fff;
+    background-color:#F49033 ;
+    text-decoration: none;
+  } */

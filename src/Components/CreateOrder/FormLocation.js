@@ -3,7 +3,7 @@ import React from 'react'
 const FormLocation = ({ title }) => {
     return (
         <form>
-            <h6 className='titles'>{title}</h6>
+            <h6 className='Order-titles'>{title}</h6>
             <div className='location'>
                 <input className='location-input' type="text" placeholder='Parish' />
                 <input className='location-input' type="text" placeholder='District'/>

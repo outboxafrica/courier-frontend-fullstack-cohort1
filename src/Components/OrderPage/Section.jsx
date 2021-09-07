@@ -1,5 +1,6 @@
 import React from 'react'
 import './Section.css'
+import {Link} from 'react-router-dom';
 
 const Section = () => {
     return (
@@ -28,7 +29,7 @@ const Section = () => {
                         </div>
                     </li>
                </ul> 
-               <button className ="button">New Order</button>
+               <button className ="button"><Link to= "/CreateOrder">New Order</Link></button>
             </div>
             
         </div>

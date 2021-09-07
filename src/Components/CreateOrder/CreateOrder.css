@@ -4,11 +4,12 @@
   /* width: 100%; */
 }
 
-.App{
+.container{
   margin: 50px auto;
   width: 50rem;
+  /* height: 70rem; */
   background-color: #e0e0e0;
-  padding-right: 2rem;
+  padding: 0  2rem 3rem 2rem;
   box-shadow: 0 0 10px #F49033;
 }
 
@@ -76,14 +77,14 @@ ol li::before{
   font-size: 1rem;
 }
 
-.titles{
+.Order-titles{
   font-size: 1rem;
   margin: 15px 0;
   font-weight: bold;
   opacity: 50%;
 }
 
-.form {
+.Order-form {
   margin-left: 2.5rem;
 }
 
@@ -128,6 +129,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   margin-left: 2.5rem;
+  background-color: transparent;
 }
 
 .button{

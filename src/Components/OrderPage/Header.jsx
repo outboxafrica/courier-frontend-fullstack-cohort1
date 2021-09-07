@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./Header.css"
 
 const Header = () => {
@@ -10,9 +11,9 @@ const Header = () => {
             </div>
 
             <div className = "nav-icons">
-            <i class="fas fa-envelope-open-text"></i>
-            <i class="fas fa-bell"></i>
-            <i class="fas fa-user-circle"></i>
+            {/* <i class="fas fa-envelope-open-text"></i>
+            <i class="fas fa-bell"></i> */}
+            <Link to = "/Profile"><i class="fas fa-user-circle"></i></Link>
 
             </div>
          

@@ -13,19 +13,19 @@ const MakeOrder = () => {
             <form>
                 <ol>
                     <li>From</li>
-                        <div className='form'>
+                        <div className='Order-form'>
                             <Form placeHolder='Enter Your Name'/>
                             <FormLocation title='Enter PickUp Location'/>
                             <textarea placeholder='Write a note'></textarea>
                         </div>
 
                     <li>To</li>
-                        <div className='form'>
+                        <div className='Order-form'>
                             <Form placeHolder='Enter Receiver Name'/>
                             <FormLocation title='Enter Destination Location'/>
                         </div>
                     <li>Package</li>
-                        <div className='form'>
+                        <div className='Order-form'>
                             <div className='package'>
                                 <PackageDetails />
                                 <Distance />

@@ -4,7 +4,7 @@ import Section from './OrderPage/Section'
 
 const Orders = () => {
     return (
-        <div>
+        <div className = "container">
             <Header/>
             <Section/>
         </div>

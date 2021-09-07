@@ -1,5 +1,6 @@
 import React from 'react'
-import "./Header.css"
+import { Link } from 'react-router-dom'
+import "../OrderPage/Header.css"
 
 const Header = () => {
     return (
@@ -10,14 +11,12 @@ const Header = () => {
             </div>
 
             <div className = "nav-icons">
-            <i class="fas fa-envelope-open-text"></i>
-            <i class="fas fa-bell"></i>
-            <i class="fas fa-user-circle"></i>
+           <Link to =  "/Profile"><i class="fas fa-user-circle"></i></Link>
 
             </div>
          
         </nav>
-        <img className = "image" src="https://res.cloudinary.com/awesomeone-maria/image/upload/v1630576323/capstone%20Project/undraw_takeout_boxes_ap54_xamxen.svg" alt="Delivery" />
+        {/* <img className = "image" src="https://res.cloudinary.com/awesomeone-maria/image/upload/v1630576323/capstone%20Project/undraw_takeout_boxes_ap54_xamxen.svg" alt="Delivery" /> */}
         </div>
     )
 }

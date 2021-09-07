@@ -2,6 +2,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    
+}
+.container{
+    margin: 20px auto;
+    width: 900px;
+    height: 650px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
 }
 .form h1{
 
@@ -59,4 +66,9 @@
     color: #fff;
     background-color: #F49033;
     margin-bottom: 10px;
+}
+.button a{
+    color: #fff;
+    background-color:#F49033 ;
+    text-decoration: none;
 }
