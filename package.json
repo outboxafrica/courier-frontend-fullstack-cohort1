@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/order-page
   "name": "courier-frontend",
@@ -22,21 +23,28 @@
 <<<<<<< HEAD
 =======
   "name": "courier-create-order",
+=======
+  "name": "courier-app",
+>>>>>>> sign-up-ft
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+<<<<<<< HEAD
     "web-vitals": "^1.1.2"
 >>>>>>> beeaaba526c87c7c7d99af377b698f8587b8fea2
 =======
 >>>>>>> origin/order-page
 =======
 >>>>>>> origin/ft-profilepage
+=======
+    "web-vitals": "^1.0.1"
+>>>>>>> sign-up-ft
   },
   "scripts": {
     "start": "react-scripts start",
