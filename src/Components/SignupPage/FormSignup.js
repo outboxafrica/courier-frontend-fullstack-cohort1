@@ -1,7 +1,7 @@
 import React from 'react';
-import validate from '../Components/validateInfo';
-import useForm from '../Components/useForm';
-import '../Components/Form.css';
+import validate from './validateInfo';
+import useForm from './useForm';
+import './Form.css';
 
 const FormSignup = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = useForm(
