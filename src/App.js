@@ -1,10 +1,10 @@
-import React from 'react'; 
-import Signin from './Components/Signin';
+import './index.css'
+import CreateOrder from './Components/CreateOrder'
 
 function App() {
   return (
     <div className="App">
-      <Signin/>
+      <CreateOrder/>
     </div>
   );
 }

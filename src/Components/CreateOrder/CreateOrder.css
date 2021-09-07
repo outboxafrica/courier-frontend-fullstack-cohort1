@@ -1,0 +1,153 @@
+*{
+  box-sizing: border-box;
+  background-color: none;
+  /* width: 100%; */
+}
+
+.App{
+  margin: 50px auto;
+  width: 50rem;
+  background-color: #e0e0e0;
+  padding-right: 2rem;
+  box-shadow: 0 0 10px #F49033;
+}
+
+/* Header Style */
+
+.navbar{
+  margin: 10px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  color: #F49033;
+}
+
+.nav-icons{
+ font-size: 2rem;
+}
+
+.fas{
+  padding: 0 1rem 0 1rem;
+  color: #F49033;
+}
+
+.fas:hover{
+  color: #cf6a0b;
+  border-radius: 100px;
+}
+
+/* Beginning of Form Stlye */
+
+/* List Style */
+
+ol {
+  list-style: none;
+  counter-reset: personal-counter;
+}
+
+ol li {
+  counter-increment: personal-counter;
+  font-size: 1.5rem;
+}
+ol li::before{
+  content:counter(personal-counter) " ";
+  padding-left: 0.5rem;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  --size:32px;
+  left:calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  color:#fff;
+  background: #F49033;
+  border-radius: 50% ;
+}
+
+/* "From" & "To" Item Styles */
+::placeholder{
+  font-size: 1rem;
+}
+
+.titles{
+  font-size: 1rem;
+  margin: 15px 0;
+  font-weight: bold;
+  opacity: 50%;
+}
+
+.form {
+  margin-left: 2.5rem;
+}
+
+.location {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-input {
+  width: 20rem;
+}
+
+input, textarea {
+  border: none;
+  border-bottom: 1px solid;
+  background-color: transparent;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border: none;
+  border-bottom: 1.9px solid;
+}
+
+.phone-input{
+  margin: 20px 0;
+  height: auto;
+}
+
+textarea {
+  resize:none;
+}
+
+/* "Package" Item Style */
+.package{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Button Style */
+.button-container{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2.5rem;
+}
+
+.button{
+  font-size: 1rem;
+  padding: 0.4rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  outline-style: none;
+  color: #fff;
+  background-color: #F49033;
+  /* position: relative; */
+  left: 70rem;
+  margin-bottom: 10px;
+  cursor:pointer;
+}
+
+.button:hover{
+  background-color: #d67c28;
+}
+
+.cancel {
+  background-color: #e0e0e0;
+}
