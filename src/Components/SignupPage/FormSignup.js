@@ -62,7 +62,7 @@ const FormSignup = ({ submitForm }) => {
             placeholder='Confirm your password'
             value={values.password2}
             onChange={handleChange}
-          />
+          /> 
           {errors.password2 && <p>{errors.password2}</p>}
         </div>
         <button className='form-input-btn' type='submit'>

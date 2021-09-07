@@ -15,7 +15,7 @@ import Signin from './Components/Signin';
 function App() {
   return (
     <Router>
-    <div className="App">
+    <div className="App"> 
 
       <Switch>
         <Route exact path ="/">
