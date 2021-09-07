@@ -1,5 +1,8 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/order-page
   "name": "courier-frontend",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +14,7 @@
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
+<<<<<<< HEAD
 =======
   "name": "courier-create-order",
   "version": "0.1.0",
@@ -24,6 +28,8 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
 >>>>>>> beeaaba526c87c7c7d99af377b698f8587b8fea2
+=======
+>>>>>>> origin/order-page
   },
   "scripts": {
     "start": "react-scripts start",

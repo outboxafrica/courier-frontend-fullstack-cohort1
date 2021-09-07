@@ -1,7 +1,11 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 <<<<<<< HEAD
+<<<<<<< HEAD
 Disallow:
 =======
 Disallow:
 >>>>>>> beeaaba526c87c7c7d99af377b698f8587b8fea2
+=======
+Disallow:
+>>>>>>> origin/order-page
