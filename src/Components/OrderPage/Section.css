@@ -5,7 +5,7 @@
     
 }
 .container{
-    margin: 20px auto;
+    margin: 20px auto; 
     width: 900px;
     height: 650px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
@@ -13,7 +13,7 @@
 .form h1{
 
     background-color: #e9cfb7;
-    text-shadow: 2px 2px #F49033;
+    text-shadow: 2px 2px #F49033; 
    
 }
 .order-section{

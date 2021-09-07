@@ -7,7 +7,7 @@ const Charges = () => {
             <table>
                 <tr>
                     <th>Qty</th>
-                    <td>2000</td>
+                    <td>2000</td> 
                 </tr>
                 <tr>
                     <th>Weight</th>

@@ -7,7 +7,7 @@ const CreateOrder = () => {
     return (
         <div className ="container">
             <Header />
-            <MakeOrder />
+            <MakeOrder /> 
         </div>
 
     )
