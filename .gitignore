@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/ft-profilepage
+
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -25,9 +22,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-<<<<<<< HEAD
-=======
 node_modules
->>>>>>> origin/order-page
-=======
->>>>>>> origin/ft-profilepage
+
