@@ -1,4 +1,4 @@
-import './index.css'
+// import './index.css'
 import CreateOrder from './Components/CreateOrder'
 
 function App() {
