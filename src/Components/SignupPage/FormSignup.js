@@ -3,8 +3,26 @@ import validate from './validateInfo';
 import useForm from './useForm';
 import './Form.css';
 import { Link } from 'react-router-dom';
+import { useStateValue } from "../../ContextApi/StateProvider";
+import {actionTypes} from "../../ContextApi/reducer";
 
 const FormSignup = ({ submitForm }) => {
+  const [{user, email}, dispatch] = useStateValue();
+  const addUser = () => {
+    console.log("context")
+    localStorage.setItem("userName", values.username);
+    localStorage.setItem("email", values.email);
+
+    //add User
+    dispatch({
+      type: actionTypes.SET_USER,
+      user: values.username
+    });
+    dispatch({
+      type: actionTypes.SET_EMAIL,
+      email: values.email
+    });
+  };
   const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
     validate
@@ -26,6 +44,7 @@ const FormSignup = ({ submitForm }) => {
             placeholder='Enter your username'
             value={values.username}
             onChange={handleChange}
+
           />
           {errors.username && <p>{errors.username}</p>}
         </div>
@@ -66,7 +85,7 @@ const FormSignup = ({ submitForm }) => {
           {errors.password2 && <p>{errors.password2}</p>}
         </div>
         <button className='form-input-btn' type='submit'>
-          <Link to = "/OrderPage">Sign up</Link>
+          <Link to = "/OrderPage" onClick={addUser}>Sign up</Link>
         </button>
         <span className='form-input-login'>
           Already have an account? Login <Link to='./Login'>here</Link>
