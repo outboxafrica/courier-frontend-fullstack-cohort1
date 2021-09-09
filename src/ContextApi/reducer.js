@@ -33,43 +33,35 @@ const reducer = (state, action) => {
                 user: action.user,
             };
             
-    }
-    switch (action.type) {
         case actionTypes.SET_EMAIL:
             return{
                 ...state,
                 email: action.email,
             };
-    }
-    switch (action.type) {
         case actionTypes.SET_ORDERNO:
             return{
                 ...state,
                 orderno: action.orderno,
             };
-    }        
-    switch (action.type) {
+
         case actionTypes.SET_QUANTITY:
             return{
                 ...state,
                 quantity: action.quantity,
             };
-   }        
-    switch (action.type) {
+
         case actionTypes.SET_FROM:
             return{
                 ...state,
                 from: action.from,
             };
-    }
-    switch (action.type) {
+
         case actionTypes.SET_TO:
             return{
                 ...state,
                 to: action.to,
             };
-    }
-    switch (action.type) {
+
         case actionTypes.SET_ACTION:
             return{
                 ...state,

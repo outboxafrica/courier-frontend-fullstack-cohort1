@@ -10,7 +10,7 @@ const Section = () => {
 
     function removeLocalStorage (e){
         e.preventDefault()
-        localStorage.removeItem("oderno")
+        localStorage.removeItem("orderno")
         localStorage.removeItem("quantity")
         localStorage.removeItem("from")
         localStorage.removeItem("to")
@@ -39,7 +39,7 @@ const Section = () => {
                         <p>Kampala</p>
                         <p>Pending</p>
                         <div className="list-icons">
-                        <i class="fas fa-edit icon"></i>
+                        <Link to= "/CreateOrder"><i class="fas fa-edit icon"></i></Link >
                         <i class="fas fa-trash-alt icon"></i>
                         </div>
                     </li>
