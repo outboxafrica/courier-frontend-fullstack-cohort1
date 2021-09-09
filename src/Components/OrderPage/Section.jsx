@@ -1,8 +1,23 @@
 import React from 'react'
 import './Section.css'
 import {Link} from 'react-router-dom';
+import { useStateValue } from "../../ContextApi/StateProvider";
+import { useHistory } from "react-router-dom";
 
 const Section = () => {
+    const [{ orderno ,quantity, from, to, status, action }] = useStateValue();
+    const history = useHistory();
+
+    function removeLocalStorage (e){
+        e.preventDefault()
+        localStorage.removeItem("oderno")
+        localStorage.removeItem("quantity")
+        localStorage.removeItem("from")
+        localStorage.removeItem("to")
+        localStorage.removeItem("status")
+        localStorage.removeItem("action")
+        history.push("/")
+    }
     return (
         <div className = "section">
             <h1>My Orders</h1>
@@ -13,7 +28,7 @@ const Section = () => {
                     <p>Quantity</p>
                     <p>From</p>
                     <p>To</p>
-                    <p>Delivery Status</p>
+                    <p>Status</p>
                     <p>Action</p>
                </div>
                <ul className = "list">
