@@ -1,8 +1,17 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import './Section.css'
 import {Link} from 'react-router-dom';
-import { useStateValue } from "../../ContextApi/StateProvider";
+import { StateContext, useStateValue } from "../../ContextApi/StateProvider";
 import { useHistory } from "react-router-dom";
+import {  StateProvider } from '../../ContextApi/StateProvider';
+import { orders } from '../../ContextApi/StateProvider';
+export const Order = ({ order }) => {
+    const { order } = useContext(StateContext);
+    const { deleteOrder} = useContext(StateProvider);
+
+}
+
+
 
 const Section = () => {
     const [{ orderno ,quantity, from, to, status, action }] = useStateValue();
@@ -21,9 +30,11 @@ const Section = () => {
     return (
         <div className = "section">
             <h1>My Orders</h1>
+            { orders.map(order=> (<Order key={orderno} order={order}/>))} 
 
             <div className = "order-section">
                <div className = "titles">
+
                     <p>Order No.</p>
                     <p>Quantity</p>
                     <p>From</p>
@@ -40,7 +51,7 @@ const Section = () => {
                         <p>Pending</p>
                         <div className="list-icons">
                         <Link to= "/CreateOrder"><i class="fas fa-edit icon"></i></Link >
-                        <i class="fas fa-trash-alt icon"></i>
+                        <i class="fas fa-trash-alt icon" onClick= {() =>deleteOrder(order.orderno)}></i>
                         </div>
                     </li>
                </ul> 
@@ -50,5 +61,6 @@ const Section = () => {
         </div>
     )
 }
+
 
 export default Section

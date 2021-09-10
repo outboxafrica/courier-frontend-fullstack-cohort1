@@ -1,4 +1,15 @@
-
+export default (state , action) => {
+    switch(action.type) {
+        case 'DELETE_TRANSACTION':
+            return {
+                ...state,
+                orders: state.orders.filter(order => order.orderno !==
+                    action.payload)
+            }
+            default:
+                return state;
+    }
+}
 export const initialState = {
     user: localStorage.getItem("userName"),
     email: localStorage.getItem("email"),
@@ -38,35 +49,35 @@ const reducer = (state, action) => {
                 ...state,
                 email: action.email,
             };
-        case actionTypes.SET_ORDERNO:
-            return{
-                ...state,
-                orderno: action.orderno,
-            };
+        // case actionTypes.SET_ORDERNO:
+        //     return{
+        //         ...state,
+        //         orderno: action.orderno,
+        //     };
 
-        case actionTypes.SET_QUANTITY:
-            return{
-                ...state,
-                quantity: action.quantity,
-            };
+        // case actionTypes.SET_QUANTITY:
+        //     return{
+        //         ...state,
+        //         quantity: action.quantity,
+        //     };
 
-        case actionTypes.SET_FROM:
-            return{
-                ...state,
-                from: action.from,
-            };
+        // case actionTypes.SET_FROM:
+        //     return{
+        //         ...state,
+        //         from: action.from,
+        //     };
 
-        case actionTypes.SET_TO:
-            return{
-                ...state,
-                to: action.to,
-            };
+        // case actionTypes.SET_TO:
+        //     return{
+        //         ...state,
+        //         to: action.to,
+        //     };
 
-        case actionTypes.SET_ACTION:
-            return{
-                ...state,
-                action: action.action,
-            };
+        // case actionTypes.SET_ACTION:
+        //     return{
+        //         ...state,
+        //         action: action.action,
+        //     };
 
            
         default:
