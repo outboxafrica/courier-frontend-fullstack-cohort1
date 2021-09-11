@@ -5,7 +5,7 @@ import { StateContext, useStateValue } from "../../ContextApi/StateProvider";
 import { useHistory } from "react-router-dom";
 import {  StateProvider } from '../../ContextApi/StateProvider';
 import { orders } from '../../ContextApi/StateProvider';
-export const Order = ({ order }) => {
+export const Order = () => {
     const { order } = useContext(StateContext);
     const { deleteOrder} = useContext(StateProvider);
 
@@ -14,6 +14,7 @@ export const Order = ({ order }) => {
 
 
 const Section = () => {
+    // make these as an array not object within array
     const [{ orderno ,quantity, from, to, status, action }] = useStateValue();
     const history = useHistory();
 
@@ -51,10 +52,12 @@ const Section = () => {
                         <p>Pending</p>
                         <div className="list-icons">
                         <Link to= "/CreateOrder"><i class="fas fa-edit icon"></i></Link >
-                        <i class="fas fa-trash-alt icon" onClick= {() =>deleteOrder(order.orderno)}></i>
+                        {/* add value */}
+                        <i class="fas fa-trash-alt icon" value={orders} onClick= {() =>deleteOrder(order.orderno)}></i>
                         </div>
                     </li>
                </ul> 
+               {/* add orders from here */}
                <button className ="button"><Link to= "/CreateOrder">New Order</Link></button>
             </div>
             

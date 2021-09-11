@@ -15,7 +15,7 @@ const initialState = {
         From:'JINJA',
         To:'KITGUM',
         Status:'pending',
-            },
+        },
         {OrderNo:'N014',
         Quantity:'3',
         From:'Masaka',
@@ -34,7 +34,7 @@ const initialState = {
 //create context
 export const StateContext = createContext();
 //provider component
-export const StateProvider = ({ children}) => 
+export const StateProvider = ({ children }) => 
 {
     const [state, dispatch] = useReducer(reducer,initialState);
     return (<StateContext.Provider value={{
@@ -54,6 +54,6 @@ function deleteOrder(orderno) {
 }
 
 
- export const orders; 
+export const orders;
 // hook which let us pull information from the data layer
 export const useStateValue = () => useContext(StateContext);
