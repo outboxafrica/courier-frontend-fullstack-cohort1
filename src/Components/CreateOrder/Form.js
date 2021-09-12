@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Form = ({ placeHolder, title }) => {
+const Form = ({ placeHolder, title,value , onChange }) => {
     return (
         <form >
             <h3>{title}</h3>
-            <input type='text' placeholder={placeHolder}/>         
+            <input type='text' placeholder={placeHolder} value={value} onChange={onChange}/>         
         </form>
 
     )

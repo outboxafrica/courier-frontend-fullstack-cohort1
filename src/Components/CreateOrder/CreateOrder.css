@@ -77,37 +77,38 @@ ol li::before{
   font-size: 1rem;
 }
 
-.Order-titles{
+/* .Order-titles{
   font-size: 1rem;
   margin: 15px 0;
   font-weight: bold;
   opacity: 50%;
-}
+} */
 
-.Order-form {
+/* .Order-form {
   margin-left: 2.5rem;
-}
+} */
 
-.location {
-  display: flex;
-  justify-content: space-between;
-}
 
-.location-input {
-  width: 20rem;
-}
+
+
 
 input, textarea {
   border: none;
+  width: 60%;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: .4rem 0 .2rem 0.9rem;
   border-bottom: 1px solid;
   background-color: transparent;
 }
+.list{
+  margin-top: .5rem;
+}
 
-input:focus, textarea:focus {
+/* input:focus, textarea:focus {
   outline: none;
   border: none;
   border-bottom: 1.9px solid;
-}
+} */
 
 .phone-input{
   margin: 20px 0;

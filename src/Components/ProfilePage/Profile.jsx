@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useStateValue } from "../../ContextApi/StateProvider";
 import './Profile.css';
+import { storage } from '../Storage';
 import { useHistory } from "react-router-dom";
 
  const Profile = () => {
-    const [{ user ,email }] = useStateValue();
+    // const [{ user ,email }] = useStateValue();
     const history = useHistory();
 
     function removeLocalStorage (e){
@@ -27,7 +28,8 @@ import { useHistory } from "react-router-dom";
          className="input" type="text" placeholder="Name" 
           /> */}
           <div className="input" >
-          {user}
+              {/* {localStorage.getItem('userName')} */}
+          {storage.name}
           </div>
             </div>
             <div className="user__email">
@@ -35,7 +37,7 @@ import { useHistory } from "react-router-dom";
          className="input" type="text" placeholder="Email"  
           /> */}
           <div className="input" >
-          {email}
+          {storage.email}
           </div>
             </div>
             <div className = "lower-div">

@@ -2,11 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from './Button'
 
-const Buttons = () => {
+const Buttons = ({onClick}) => {
     return (
         <div className='button-container'>
-            <Button className='cancel' text='Cancel' />
-        <Link to = "/OrderPage"><Button  text='Create Order'/></Link> 
+        <Link to = "/OrderPage"><Button  text='Create Order' onClick = {onClick}/></Link> 
         </div>
     )
 }

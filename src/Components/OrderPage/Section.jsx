@@ -1,69 +1,81 @@
-import React,{useContext} from 'react'
+import React,{ useEffect, useState} from 'react'
+import axios from 'axios';
 import './Section.css'
 import {Link} from 'react-router-dom';
-import { StateContext, useStateValue } from "../../ContextApi/StateProvider";
-import { useHistory } from "react-router-dom";
-import {  StateProvider } from '../../ContextApi/StateProvider';
-import { orders } from '../../ContextApi/StateProvider';
-export const Order = () => {
-    const { order } = useContext(StateContext);
-    const { deleteOrder} = useContext(StateProvider);
-
-}
-
-
 
 const Section = () => {
-    // make these as an array not object within array
-    const [{ orderno ,quantity, from, to, status, action }] = useStateValue();
-    const history = useHistory();
 
-    function removeLocalStorage (e){
-        e.preventDefault()
-        localStorage.removeItem("orderno")
-        localStorage.removeItem("quantity")
-        localStorage.removeItem("from")
-        localStorage.removeItem("to")
-        localStorage.removeItem("status")
-        localStorage.removeItem("action")
-        history.push("/")
-    }
-    return (
-        <div className = "section">
-            <h1>My Orders</h1>
-            { orders.map(order=> (<Order key={orderno} order={order}/>))} 
+  
+    const [infor, setInfor] = useState(null);
 
-            <div className = "order-section">
-               <div className = "titles">
+    const baseURL = "https://courier-fullstack-api.herokuapp.com/parcels"
 
-                    <p>Order No.</p>
-                    <p>Quantity</p>
-                    <p>From</p>
-                    <p>To</p>
-                    <p>Status</p>
-                    <p>Action</p>
-               </div>
-               <ul className = "list">
-                    <li className ="item">
-                        <p>N012</p>
-                        <p>Quality</p>
-                        <p>Fort Potal</p>
-                        <p>Kampala</p>
-                        <p>Pending</p>
-                        <div className="list-icons">
-                        <Link to= "/CreateOrder"><i class="fas fa-edit icon"></i></Link >
-                        {/* add value */}
-                        <i class="fas fa-trash-alt icon" value={orders} onClick= {() =>deleteOrder(order.orderno)}></i>
-                        </div>
-                    </li>
-               </ul> 
-               {/* add orders from here */}
-               <button className ="button"><Link to= "/CreateOrder">New Order</Link></button>
-            </div>
+    useEffect(() => {
+        const ac = new AbortController();
+        axios.get(baseURL,{signal: ac.signal}).then((res)=>{
+            // console.log(res.data);
+            setInfor((res.data).reverse())
             
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+       
+       
+    }, [])
+    
+  console.log(infor)
+
+  const remove= (id)=>{
+  axios.delete(`https://courier-fullstack-api.herokuapp.com/parcels/${id}`)
+        // .then(() => setStatus('Delete successful'));
+  }
+
+    return (
+        <>
+        {infor ? 
+             <div className = "section">
+                 {/* {console.log(infor[0])} */}
+        <h1>My Orders</h1>
+        {/* { orders.map(order=> (<Order key={orderno} order={order}/>))}  */}
+
+        <div className = "order-section">
+           <div className = "titles">
+
+                <p>Itemname</p>
+                <p>Sender</p>
+                <p>Sender's no</p>
+                <p>Receiver</p>
+                <p>Receiver's no</p>
+                <p>Reciver's location</p>
+                <p>Action</p>
+           </div>
+           <ul className = "list">
+                <li className ="item">
+                    <p>{infor[0].itemname}</p>
+                    <p>{infor[0].sendersname}</p>
+                    <p>{infor[0].senderscontact}</p>
+                    <p>{infor[0].receiversname}</p>
+                    <p>{infor[0].receiverscontact}</p>
+                    <p>{infor[0].receiverslocation}</p>
+                    <div className="list-icons">
+                    <Link to= "/CreateOrder"><i class="fas fa-edit icon"></i></Link >
+                   
+                    <i class="fas fa-trash-alt icon" onClick ={remove(infor[0]._id)}></i>
+                    </div>
+                </li>
+           </ul> 
+           
+           <button className ="button"><Link to= "/CreateOrder">New Order</Link></button>
         </div>
+        
+    </div> : "loading.." }
+    </>
+       
     )
 }
 
 
 export default Section
+
+// value={orders} onClick= {() =>deleteOrder(order.orderno)}
