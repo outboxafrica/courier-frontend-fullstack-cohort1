@@ -47,17 +47,25 @@ const Section = () => {
                 <p>Sender's no</p>
                 <p>Receiver</p>
                 <p>Receiver's no</p>
-                <p>Reciver's location</p>
+                <p>Receiver's location</p>
                 <p>Action</p>
+           
            </div>
            <ul className = "list">
                 <li className ="item">
-                    <p>{infor[0].itemname}</p>
-                    <p>{infor[0].sendersname}</p>
-                    <p>{infor[0].senderscontact}</p>
-                    <p>{infor[0].receiversname}</p>
-                    <p>{infor[0].receiverscontact}</p>
-                    <p>{infor[0].receiverslocation}</p>
+                    {infor.map(order=>{
+                        return(
+                            <div>
+                                <p>{order.itemname}</p>
+                                <p>{order.sendersname}</p>
+                                <p>{order.senderscontact}</p>
+                                <p>{order.receiversname}</p>
+                                <p>{order.receiverscontact}</p>
+                                <p>{order.receiverslocation}</p>
+                            </div>
+                        )
+
+                    })}
                     <div className="list-icons">
                     <Link to= "/CreateOrder"><i class="fas fa-edit icon"></i></Link >
                    
@@ -78,4 +86,3 @@ const Section = () => {
 
 export default Section
 
-// value={orders} onClick= {() =>deleteOrder(order.orderno)}

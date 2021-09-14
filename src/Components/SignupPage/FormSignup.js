@@ -3,8 +3,6 @@ import validate from './validateInfo';
 import useForm from './useForm';
 import './Form.css';
 import { Link } from 'react-router-dom';
-// import { useStateValue } from "../../ContextApi/StateProvider";
-// import {actionTypes} from "../../ContextApi/reducer";
 
 const FormSignup = ({ submitForm }) => {
   // const [dispatch] = useStateValue();
@@ -13,15 +11,7 @@ const FormSignup = ({ submitForm }) => {
     localStorage.setItem("userName", values.username);
     localStorage.setItem("email", values.email);
 
-  //   //add User
-  //   dispatch({
-  //     type: actionTypes.SET_USER,
-  //     user: values.username
-  //   });
-  //   dispatch({
-  //     type: actionTypes.SET_EMAIL,
-  //     email: values.email
-  //   });
+  
   };
   const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,

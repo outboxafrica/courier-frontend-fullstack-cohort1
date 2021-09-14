@@ -13,7 +13,7 @@ const MakeOrder = () => {
     const [receiversname, setReceiversname] = useState(null)
     const [receiverscontact, setReceiverscontact] = useState(null)
     const [receiverslocation, setReceiverslocation] = useState(null)
-    const [data, setData] = useState(null)
+    const [ setData] = useState(null)
     let history = useHistory();
 
     const inforData = {
@@ -69,13 +69,7 @@ const MakeOrder = () => {
                              <Form placeHolder='Enter Receivers Location' value={receiverslocation} onChange={(event) => setReceiverslocation(event.target.value)}/>
                              {console.log(receiverslocation)}
                         </div>
-                    {/* <li className ="list">Package</li> */}
-                        {/* <div className='Order-form'>
-                            <div className='package'>
-                                <PackageDetails />
-                                
-                            </div>
-                        </div> */}
+                    
                 </ol>
             </form>
             <div className='button-container' >

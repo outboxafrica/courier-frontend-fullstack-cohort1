@@ -77,21 +77,6 @@ ol li::before{
   font-size: 1rem;
 }
 
-/* .Order-titles{
-  font-size: 1rem;
-  margin: 15px 0;
-  font-weight: bold;
-  opacity: 50%;
-} */
-
-/* .Order-form {
-  margin-left: 2.5rem;
-} */
-
-
-
-
-
 input, textarea {
   border: none;
   width: 60%;
@@ -104,11 +89,6 @@ input, textarea {
   margin-top: .5rem;
 }
 
-/* input:focus, textarea:focus {
-  outline: none;
-  border: none;
-  border-bottom: 1.9px solid;
-} */
 
 .phone-input{
   margin: 20px 0;
