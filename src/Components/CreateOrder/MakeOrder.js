@@ -50,7 +50,7 @@ const MakeOrder = () => {
                 <ol>
                     <li className ="list">From</li>
                         <div className='Order-form'>
-                        <input placeHolder='Enter Item Name' value={itemname} onChange={(event) => setItemname(event.target.value)}/>
+                        <input placeHolder='Enter Item' value={itemname} onChange={(event) => setItemname(event.target.value)}/>
                                 {console.log(itemname)}
                             <input placeHolder='Enter Your Name' value={sendersname} onChange={(event) => setSendersname(event.target.value)}/>
                                 {console.log(sendersname)}

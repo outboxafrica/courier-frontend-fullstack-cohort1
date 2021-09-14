@@ -36,10 +36,10 @@ const Section = () => {
         {infor ? 
              <div className = "section">
                  {/* {console.log(infor[0])} */}
-        <h1>My Orders</h1>
-        {/* { orders.map(order=> (<Order key={orderno} order={order}/>))}  */}
+        <h1>My infor[0]s</h1>
+        {/* { infor[0]s.map(infor[0]=> (<infor[0] key={infor[0]no} infor[0]={infor[0]}/>))}  */}
 
-        <div className = "order-section">
+        <div className = "infor[0]-section">
            <div className = "titles">
 
                 <p>Itemname</p>
@@ -53,28 +53,28 @@ const Section = () => {
            </div>
            <ul className = "list">
                 <li className ="item">
-                    {infor.map(order=>{
+                   
                         return(
                             <div>
-                                <p>{order.itemname}</p>
-                                <p>{order.sendersname}</p>
-                                <p>{order.senderscontact}</p>
-                                <p>{order.receiversname}</p>
-                                <p>{order.receiverscontact}</p>
-                                <p>{order.receiverslocation}</p>
+                                <p>{infor[0].itemname}</p>
+                                <p>{infor[0].sendersname}</p>
+                                <p>{infor[0].senderscontact}</p>
+                                <p>{infor[0].receiversname}</p>
+                                <p>{infor[0].receiverscontact}</p>
+                                <p>{infor[0].receiverslocation}</p>
                             </div>
                         )
 
-                    })}
+                    )
                     <div className="list-icons">
-                    <Link to= "/CreateOrder"><i class="fas fa-edit icon"></i></Link >
+                    <Link to= "/Createinfor[0]"><i class="fas fa-edit icon"></i></Link >
                    
                     <i class="fas fa-trash-alt icon" onClick ={remove(infor[0]._id)}></i>
                     </div>
                 </li>
            </ul> 
            
-           <button className ="button"><Link to= "/CreateOrder">New Order</Link></button>
+           <button className ="button"><Link to= "/Createinfor[0]">New infor[0]</Link></button>
         </div>
         
     </div> : "loading.." }
