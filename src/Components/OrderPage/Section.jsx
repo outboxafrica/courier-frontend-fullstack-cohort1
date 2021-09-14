@@ -51,18 +51,28 @@ const Section = () => {
                 <p>Action</p>
            </div>
            <ul className = "list">
-                <li className ="item">
-                    <p>{infor[0].itemname}</p>
-                    <p>{infor[0].sendersname}</p>
-                    <p>{infor[0].senderscontact}</p>
-                    <p>{infor[0].receiversname}</p>
-                    <p>{infor[0].receiverscontact}</p>
-                    <p>{infor[0].receiverslocation}</p>
-                    <div className="list-icons">
-                    <Link to= "/CreateOrder"><i class="fas fa-edit icon"></i></Link >
-                   
-                    <i class="fas fa-trash-alt icon" onClick ={remove(infor[0]._id)}></i>
-                    </div>
+                <li >
+                    {infor.map(order=>{
+                        return(
+                            <div>
+                                <div key = {order._id} className ="item">
+                                    <p>{order.itemname}</p>
+                                    <p>{order.sendersname}</p>
+                                    <p>{order.senderscontact}</p>
+                                    <p>{order.receiversname}</p>
+                                    <p>{order.receiverscontact}</p>
+                                    <p>{order.receiverslocation}</p>
+                                    <div className="list-icons">
+                                        <Link to= "/CreateOrder"><i class="fas fa-edit icon"></i></Link >
+                                    
+                                        <i class="fas fa-trash-alt icon" onClick ={remove(order._id)}></i>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        )
+                    })}
+                    
                 </li>
            </ul> 
            
