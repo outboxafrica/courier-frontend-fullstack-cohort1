@@ -42,6 +42,7 @@
     background-color: #e7a669;
 }
 .item p{
+    display: flex;
     text-align: left;
     background-color: #f0b37b44;
 }

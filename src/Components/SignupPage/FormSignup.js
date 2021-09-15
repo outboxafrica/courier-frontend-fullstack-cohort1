@@ -3,31 +3,20 @@ import validate from './validateInfo';
 import useForm from './useForm';
 import './Form.css';
 import { Link } from 'react-router-dom';
-// import { useStateValue } from "../../ContextApi/StateProvider";
-// import {actionTypes} from "../../ContextApi/reducer";
 
 const FormSignup = ({ submitForm }) => {
-  // const [dispatch] = useStateValue();
   const addUser = () => {
     
     localStorage.setItem("userName", values.username);
     localStorage.setItem("email", values.email);
 
-  //   //add User
-  //   dispatch({
-  //     type: actionTypes.SET_USER,
-  //     user: values.username
-  //   });
-  //   dispatch({
-  //     type: actionTypes.SET_EMAIL,
-  //     email: values.email
-  //   });
+
   };
   const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
     validate
   );
-  // console.log(values.username)
+
   return (
     <div className='form-content-right'>
       <form onSubmit={handleSubmit} className='form' noValidate>
@@ -35,6 +24,7 @@ const FormSignup = ({ submitForm }) => {
         <h2>
         We help users deliver parcels to different  destinations & provides courier quotes based on weight categories
         </h2>
+        {/* username input */}
         <div className='form-inputs'>
           <label className='form-label'>Username</label>
           <input
@@ -44,10 +34,12 @@ const FormSignup = ({ submitForm }) => {
             placeholder='Enter your username'
             value={values.username}
             onChange={handleChange}
-
-          />
+            
+            />
           {errors.username && <p>{errors.username}</p>}
         </div>
+
+            {/* email input */}
         <div className='form-inputs'>
           <label className='form-label'>Email</label>
           <input
@@ -60,6 +52,8 @@ const FormSignup = ({ submitForm }) => {
           />
           {errors.email && <p>{errors.email}</p>}
         </div>
+
+            {/* password input */}
         <div className='form-inputs'>
           <label className='form-label'>Password</label>
           <input
@@ -72,6 +66,8 @@ const FormSignup = ({ submitForm }) => {
           />
           {errors.password && <p>{errors.password}</p>}
         </div>
+
+            {/* password2 input */}
         <div className='form-inputs'>
           <label className='form-label'>Confirm Password</label>
           <input
@@ -84,14 +80,14 @@ const FormSignup = ({ submitForm }) => {
           /> 
           {errors.password2 && <p>{errors.password2}</p>}
         </div>
-        <button className='form-input-btn' type='submit'>
-          <Link to = "/OrderPage"
-           onClick={addUser}
-           >Sign up</Link>
-        </button>
+
+        <button className='form-input-btn' type='submit'>Sign Up</button>
+
+        {/* footer */}
         <span className='form-input-login'>
           Already have an account? Login <Link to='./Login'>here</Link>
         </span>
+        
       </form>
     </div>
   );

@@ -13,7 +13,6 @@ const Section = () => {
     useEffect(() => {
         const ac = new AbortController();
         axios.get(baseURL,{signal: ac.signal}).then((res)=>{
-            // console.log(res.data);
             setInfor((res.data).reverse())
             
         })
@@ -28,16 +27,13 @@ const Section = () => {
 
   const remove= (id)=>{
   axios.delete(`https://courier-fullstack-api.herokuapp.com/parcels/${id}`)
-        // .then(() => setStatus('Delete successful'));
   }
 
     return (
         <>
         {infor ? 
              <div className = "section">
-                 {/* {console.log(infor[0])} */}
         <h1>My Orders</h1>
-        {/* { orders.map(order=> (<Order key={orderno} order={order}/>))}  */}
 
         <div className = "order-section">
            <div className = "titles">
@@ -87,5 +83,3 @@ const Section = () => {
 
 
 export default Section
-
-// value={orders} onClick= {() =>deleteOrder(order.orderno)}

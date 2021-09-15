@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../Components/SignupPage/Form.css';
 import FormSignup from './SignupPage/FormSignup';
-import FormSuccess from './SignupPage/FormSuccess';
+import {Redirect} from 'react-router-dom'
 
 const Form = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -17,7 +17,7 @@ const Form = () => {
         {!isSubmitted ? (
           <FormSignup submitForm={submitForm} />
         ) : (
-          <FormSuccess /> 
+          <Redirect to='/OrderPage' /> 
         )}
       </div>
  

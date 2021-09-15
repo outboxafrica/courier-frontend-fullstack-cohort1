@@ -51,6 +51,7 @@
 .user__email {
     color: rgb(175, 65, 65);
     background-color:#e9cfb7;
+    width: max-content;
 }
 .lower-div{
     background-color:#e9cfb7;
