@@ -43,7 +43,7 @@
     flex-wrap: wrap;
 }
 p{
-    width:5rem;
+    width:6rem;
 }
 .item p{
     display: flex;

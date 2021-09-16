@@ -59,9 +59,9 @@ const Section = () => {
                                     <p>{order.receiverscontact}</p>
                                     <p>{order.receiverslocation}</p>
                                     <div className="list-icons">
-                                        <Link to= "/CreateOrder"><i class="fas fa-edit icon"></i></Link >
+                                        <Link to= "/CreateOrder" className="icon" ><i className="fas fa-edit icon"></i></Link >
                                     
-                                        <i class="fas fa-trash-alt icon" onClick ={remove(order._id)}></i>
+                                        <i className="fas fa-trash-alt icon" onClick ={remove(order._id)}></i>
                                     </div>
                                 </div>
                                 
