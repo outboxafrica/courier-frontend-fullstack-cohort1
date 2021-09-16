@@ -21,21 +21,27 @@ function App() {
     <div className="App"> 
 
       <Switch>
+
         <Route exact path ="/">
         <Form />
         </Route>
+
         <Route path ="/Login">
         <Signin/>
         </Route>
+
         <Route path ="/OrderPage">
         <Order/>
         </Route>
+
         <Route path ="/CreateOrder">
         <CreateOrder/>
         </Route>
+
         <Route path ="/Profile">
         <Profile/> 
         </Route>
+        
       </Switch>
      
     </div>

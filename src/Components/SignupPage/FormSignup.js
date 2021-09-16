@@ -12,6 +12,7 @@ const FormSignup = ({ submitForm }) => {
 
 
   };
+
   const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
     validate

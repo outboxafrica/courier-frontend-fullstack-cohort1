@@ -35,11 +35,15 @@
 }
 .item{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0.4rem;
     margin: 0.6rem 1rem 0.6rem 1rem;
     border-radius: 15px;
     background-color: #e7a669;
+    flex-wrap: wrap;
+}
+p{
+    width:2px``;
 }
 .item p{
     display: flex;
