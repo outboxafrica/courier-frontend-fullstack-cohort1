@@ -82,7 +82,7 @@ const FormSignup = ({ submitForm }) => {
           {errors.password2 && <p>{errors.password2}</p>}
         </div>
 
-        <button className='form-input-btn' type='submit'>Sign Up</button>
+        <button className='form-input-btn' type='submit'onClick={addUser} >Sign Up</button>
 
         {/* footer */}
         <span className='form-input-login'>

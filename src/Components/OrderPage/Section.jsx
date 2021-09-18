@@ -8,7 +8,7 @@ const Section = () => {
   
     const [infor, setInfor] = useState(null);
 
-    const baseURL = "https://courier-fullstack-api.herokuapp.com/parcels"
+    const baseURL = "https://courier-fullstack-api.herokuapp.com/"
 
     useEffect(() => {
         const ac = new AbortController();
@@ -26,7 +26,7 @@ const Section = () => {
   console.log(infor)
 
   const remove= (id)=>{
-  axios.delete(`https://courier-fullstack-api.herokuapp.com/parcels/${id}`)
+  axios.delete(`hhttps://courier-fullstack-api.herokuapp.com/${id}`)
   }
 
     return (
