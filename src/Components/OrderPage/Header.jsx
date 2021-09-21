@@ -13,7 +13,7 @@ const Header = () => {
             <div className = "nav-icons">
             {/* <i class="fas fa-envelope-open-text"></i>
             <i class="fas fa-bell"></i> */}
-            <Link to = "/Profile"><i class="fas fa-user-circle"></i></Link>
+            <Link to = "/Profile"><i className="fas fa-user-circle"></i></Link>
 
             </div>
          

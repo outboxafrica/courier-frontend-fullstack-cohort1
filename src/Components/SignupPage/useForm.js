@@ -28,7 +28,36 @@ const useForm = (callback, validate) => {
   useEffect(
     () => {
       if (Object.keys(errors).length === 0 && isSubmitting) {
-        callback();
+          
+          let URL = 'https://courier-backend-fullstack.herokuapp.com/api/v1/users/signup';
+
+          let data = {
+              username: values.username,
+              email: values.email,
+              password: values.password
+          } 
+
+          fetch(URL,{
+              method:'POST',
+              headers:{
+                  'Content-Type': 'application/json'
+              },
+              body:JSON.stringify(data)
+          })
+
+          .then((res)=>{
+              return res.json();
+          })
+          .then((data)=>{
+              console.log(data);
+              // Add the token received to local-storage
+              localStorage.setItem('token',data.token)
+              // redirects to orders page
+              callback();
+          })
+          .catch((err)=>{
+              console.log(err);
+          })
       }
     },
     // [errors]

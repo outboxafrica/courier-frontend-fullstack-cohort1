@@ -5,25 +5,38 @@ import {Link} from 'react-router-dom';
 
 const Section = () => {
 
-  
     const [infor, setInfor] = useState(null);
 
     const baseURL = "https://courier-fullstack-api.herokuapp.com/api/v1/parcels"
 
     useEffect(() => {
-        const ac = new AbortController();
-        axios.get(baseURL,{signal: ac.signal}).then((res)=>{
-            setInfor((res.data).reverse())
+        // const ac = new AbortController();
+        // axios.get(baseURL,{signal: ac.signal}).then((res)=>{
+        //     setInfor((res.data).reverse())
             
+        // })
+        // .catch((err)=>{
+        //     console.log(err)
+        // })
+       fetch(baseURL,{
+           headers:{
+                'Content-Type': 'application/json',
+                'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNGE1MTc3ZTdmYTdhMDAxNmQ0N2FkZCIsImlhdCI6MTYzMjI2MDQ3MSwiZXhwIjoxNjMyNTE5NjcxfQ.w4R1mq6NM_cPwEFsM82lB9-t9FUGxUfUMDKOpe8tFEA'
+           }
+       })
+        .then((res)=>{
+            return res.json();
+        })
+        .then((data)=>{
+            console.log(data);
+            setInfor(data);
         })
         .catch((err)=>{
-            console.log(err)
+            console.log(err);
         })
-       
        
     }, [])
     
-  console.log(infor)
 
   const remove= (id)=>{
     axios.delete(`https://courier-fullstack-api.herokuapp.com/api/v1/parcels/${id}`)
