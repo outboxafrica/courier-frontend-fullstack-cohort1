@@ -29,11 +29,11 @@ const MakeOrder = () => {
     const baseURL = "https://courier-fullstack-api.herokuapp.com/api/v1/parcels"
 
     function post(){
-        axios.post(baseURL, inforData, data)
+        axios.post(baseURL, inforData)
 
         .then((res)=>{
-            console.log(res.data);
-            setData((res.data))
+            console.log(res);
+            setData((res))
             console.log("Data sent")
             history.push("/OrderPage")
             window.location.reload()
