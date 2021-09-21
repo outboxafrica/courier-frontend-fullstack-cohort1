@@ -13,10 +13,8 @@ import Form from './Components/Form';
 import Signin from './Components/Signin';
 
 
-import { StateProvider } from './ContextApi/StateProvider';
 function App() {
   return (
-    <StateProvider>
     <Router>
     <div className="App"> 
 
@@ -46,7 +44,6 @@ function App() {
      
     </div>
     </Router>
-    </StateProvider>
   );
   
 }

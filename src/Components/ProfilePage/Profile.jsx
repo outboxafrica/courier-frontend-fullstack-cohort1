@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Profile.css';
-import { storage } from '../Storage';
 import { useHistory } from "react-router-dom";
 
 const Profile = () => {

@@ -26,7 +26,7 @@ const MakeOrder = () => {
             receiverslocation:receiverslocation
     }
     
-    const baseURL = "https://courier-fullstack-api.herokuapp.com/"
+    const baseURL = "https://courier-fullstack-api.herokuapp.com/api/v1/parcels"
 
     function post(){
         axios.post(baseURL, inforData, data)
