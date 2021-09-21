@@ -13,34 +13,37 @@ import Form from './Components/Form';
 import Signin from './Components/Signin';
 
 
-import { StateProvider } from './ContextApi/StateProvider';
 function App() {
   return (
-    <StateProvider>
     <Router>
     <div className="App"> 
 
       <Switch>
+
         <Route exact path ="/">
         <Form />
         </Route>
+
         <Route path ="/Login">
         <Signin/>
         </Route>
+
         <Route path ="/OrderPage">
         <Order/>
         </Route>
+
         <Route path ="/CreateOrder">
         <CreateOrder/>
         </Route>
+
         <Route path ="/Profile">
         <Profile/> 
         </Route>
+        
       </Switch>
      
     </div>
     </Router>
-    </StateProvider>
   );
   
 }

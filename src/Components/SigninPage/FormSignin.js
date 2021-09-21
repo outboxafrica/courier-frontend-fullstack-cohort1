@@ -5,7 +5,7 @@ import './Form.css';
 import { Link } from 'react-router-dom';
 
 
-const FormSignup = ({ submitForm }) => {
+const FormSignin = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
     validate
@@ -14,15 +14,17 @@ const FormSignup = ({ submitForm }) => {
   return (
     <div className='form-content-right'>
       <form onSubmit={handleSubmit} className='form' noValidate>
-      <a href="home"><h1>Safe Courier</h1></a>
+        <a href="home"><h1>Safe Courier</h1></a>
         <h2>
-        We help users deliver parcels to different  destinations & provides courier quotes based on weight categories
+          We help users deliver parcels to different  destinations & provides courier quotes based on weight categories
         </h2>
+
+        {/* Username or email field */}
         <div className='form-inputs'>
           <label className='form-label'>Username</label>
           <input
             className='form-input'
-            type='text' 
+            type='text'
             name='username'
             placeholder='Enter your username'
             value={values.username}
@@ -30,7 +32,8 @@ const FormSignup = ({ submitForm }) => {
           />
           {errors.username && <p>{errors.username}</p>}
         </div>
-        
+
+        {/* Password field */}
         <div className='form-inputs'>
           <label className='form-label'>Password</label>
           <input
@@ -43,16 +46,14 @@ const FormSignup = ({ submitForm }) => {
           />
           {errors.password && <p>{errors.password}</p>}
         </div>
-       
-        <button className='form-input-btn' type='submit'>
-         <Link to = '/OrderPage'> Sign In</Link> 
-        </button>
+
+        <button className='form-input-btn' type='submit'>Sign In</button>
         <span className='form-input-login'>
-          Do not have an account? Sign in <Link to='./'>here</Link>
+          Do not have an account? Sign up <Link to='./'>here</Link>
         </span>
       </form>
     </div>
   );
 };
 
-export default FormSignup;
+export default FormSignin;

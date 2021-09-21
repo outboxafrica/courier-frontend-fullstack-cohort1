@@ -8,12 +8,11 @@ const Section = () => {
   
     const [infor, setInfor] = useState(null);
 
-    const baseURL = "https://courier-fullstack-api.herokuapp.com/parcels"
+    const baseURL = "https://courier-fullstack-api.herokuapp.com/api/v1/parcels"
 
     useEffect(() => {
         const ac = new AbortController();
         axios.get(baseURL,{signal: ac.signal}).then((res)=>{
-            // console.log(res.data);
             setInfor((res.data).reverse())
             
         })
@@ -27,17 +26,14 @@ const Section = () => {
   console.log(infor)
 
   const remove= (id)=>{
-  axios.delete(`https://courier-fullstack-api.herokuapp.com/parcels/${id}`)
-        // .then(() => setStatus('Delete successful'));
+    axios.delete(`https://courier-fullstack-api.herokuapp.com/api/v1/parcels/${id}`)
   }
 
     return (
         <>
         {infor ? 
              <div className = "section">
-                 {/* {console.log(infor[0])} */}
         <h1>My Orders</h1>
-        {/* { orders.map(order=> (<Order key={orderno} order={order}/>))}  */}
 
         <div className = "order-section">
            <div className = "titles">
@@ -63,9 +59,9 @@ const Section = () => {
                                     <p>{order.receiverscontact}</p>
                                     <p>{order.receiverslocation}</p>
                                     <div className="list-icons">
-                                        <Link to= "/CreateOrder"><i class="fas fa-edit icon"></i></Link >
+                                        <Link to= "/CreateOrder" className="icon" ><i className="fas fa-edit icon"></i></Link >
                                     
-                                        <i class="fas fa-trash-alt icon" onClick ={remove(order._id)}></i>
+                                        <i className="fas fa-trash-alt icon" onClick ={remove(order._id)}></i>
                                     </div>
                                 </div>
                                 
@@ -87,5 +83,3 @@ const Section = () => {
 
 
 export default Section
-
-// value={orders} onClick= {() =>deleteOrder(order.orderno)}

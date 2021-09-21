@@ -6,8 +6,8 @@ import Form from "./SigninPage/Form";
 const Signin = () => {
     return (
         <div>
-            <Form/>
             
+            <Form/>
             
         </div>
     )

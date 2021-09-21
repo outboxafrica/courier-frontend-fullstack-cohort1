@@ -26,10 +26,10 @@ const MakeOrder = () => {
             receiverslocation:receiverslocation
     }
     
-    const baseURL = "https://courier-fullstack-api.herokuapp.com/parcels"
+    const baseURL = "https://courier-fullstack-api.herokuapp.com/api/v1/parcels"
 
     function post(){
-        axios.post(baseURL, inforData)
+        axios.post(baseURL, inforData, data)
 
         .then((res)=>{
             console.log(res.data);
