@@ -7,23 +7,30 @@ import { Link } from 'react-router-dom';
 const FormSignup = ({ submitForm }) => {
   const addUser = () => {
     
-    localStorage.setItem("userName", values.username);
+    localStorage.setItem("username", values.username);
     localStorage.setItem("email", values.email);
 
   };
 
-  const { handleChange, handleSubmit, values, errors } = useForm(
+  const { handleChange, handleSubmit, values, errors, isLoading, resError} = useForm(
     submitForm,
     validate
   );
 
+  
+
   return (
     <div className='form-content-right'>
+      
       <form onSubmit={handleSubmit} className='form' noValidate>
       <a href="home"><h1>Safe Courier</h1></a>
         <h2>
         We help users deliver parcels to different  destinations & provides courier quotes based on weight categories
         </h2>
+
+        {/* Display error from api */}
+        <p style={resError?{display:'block', border:'2px solid red', fontFamily:'monospace', padding:'10px', width:'100%', margin:'10px', textAlign:'center'}:{display:'none'}}>{resError}</p>
+      
         {/* username input */}
         <div className='form-inputs'>
           <label className='form-label'>Username</label>
@@ -81,7 +88,7 @@ const FormSignup = ({ submitForm }) => {
           {errors.password2 && <p>{errors.password2}</p>}
         </div>
 
-        <button className='form-input-btn' type='submit'onClick={addUser} >Sign Up</button>
+        <button className='form-input-btn' type='submit' onClick={addUser} >{ isLoading ? 'Loading . . .' : 'Sign Up'}</button>
 
         {/* footer */}
         <span className='form-input-login'>
