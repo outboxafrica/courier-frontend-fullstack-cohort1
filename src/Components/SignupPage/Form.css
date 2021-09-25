@@ -116,11 +116,13 @@
     height: 40px;
     margin-top: 10px;
     border-radius: 10px;
-    background: #F49033;
+    background: #85827f;
     outline: none;
     border: none;
     color: #fff;
     font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
   }
   
   .form-input-btn:hover {

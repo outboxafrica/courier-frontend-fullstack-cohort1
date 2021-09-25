@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-// import axios from 'axios'
-// import { useHistory } from "react-router-dom";
 
 const useForm = (callback, validate) => {
   const [values, setValues] = useState({
@@ -11,7 +9,12 @@ const useForm = (callback, validate) => {
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  // let history = useHistory();
+
+  // check if the api call has returned response
+  const [isLoading,setIsLoading] = useState(false);
+  // catch errors from the api
+  const [resError,setResError] = useState(null);
+
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -19,6 +22,7 @@ const useForm = (callback, validate) => {
       ...values,
       [name]: value
     });
+    setResError(null);
   };
 
   const handleSubmit = e => {
@@ -26,19 +30,20 @@ const useForm = (callback, validate) => {
 
     setErrors(validate(values));
     setIsSubmitting(true);
+    setIsLoading(true);
   };
 
   useEffect(
     () => {
-      if (Object.keys(errors).length === 0 && isSubmitting) {
-          
-          let URL = 'https://courier-backend-fullstack.herokuapp.com/api/v1/users/signup';
+        console.log(values);
+        if(Object.keys(errors).length === 0 && isSubmitting){
+          let URL = 'https://courier-backend-fullstack1.herokuapp.com/api/v1/users/signup';
 
           let data = {
-              username: values.username,
-              email: values.email,
-              password: values.password
-          } 
+            username:values.username,
+            email:values.email,
+            password:values.password
+          }
 
           fetch(URL,{
               method:'POST',
@@ -49,24 +54,33 @@ const useForm = (callback, validate) => {
           })
 
           .then((res)=>{
-              return res.json();
+            console.log(res)
+            if(!res.ok){
+              throw new Error('Wrong Email or Password . . .');
+            }
+            return res.json();
           })
           .then((data)=>{
               console.log(data);
               // Add the token received to local-storage
               localStorage.setItem('token',data.token)
+              // Add the User Id received to localstorage
+              localStorage.setItem('userID',data.savedUser._id);
               // redirects to orders page
               callback();
           })
           .catch((err)=>{
               console.log(err);
+              setResError(err.message);
+              setIsLoading(false);
+              setIsSubmitting(false);
           })
-      }
+        }
     },
-    // [errors]
+    // [userData]
   );
 
-  return { handleChange, handleSubmit, values, errors };
+  return { handleChange, handleSubmit, values, errors, isLoading, resError };
 };
 
 export default useForm;
